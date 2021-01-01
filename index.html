@@ -1,5 +1,7 @@
 <!doctype html>
 
+<html>
+
  <head>
 
   <title>Website Title</title>
@@ -8,142 +10,14 @@
 
   <body>
 
-   <h1>H1 Heading</h1>
+   <h1>Home - Website Title</h1>
 
-   <h2>Gallery</h2>
+   <button><a href='index.html'>Home</a></button>
+   <button><a href='gallery.html'>Gallery</a></button>
+   <button><a href='about.html'>About</a></button>
+   <button><a href='questions.html'>FAQ</a></button>
+   <button><a href='contact.html'>Contact</a></button>
 
-   <img src='/home/livia/website-frontend/painting.jpg' alt='Painting 1' width='375'
-    height='300'>
-
-   <h2>About</h2>
-
-   <img src='/home/livia/website-frontend/IMG_1807.jpg' alt='First Last' width='300'
-    height='300'>
-
-   <p>First paragraph...</p>
-
-   <p>Second paragraph ...</p>
-
-   <h2>FAQ</h2>
-
-   <p><strong>Question 1 ...?</strong><br></p>
-
-   <p>Answer 1.<br></p>
-
-   <p><strong>Question 2 ...?</strong><br></p>
-
-   <p>Answer 2.</p>
-
-   <h2>Contact</h2>
-
-   <form action='http://localhost:8080/contact' method='POST'>
-
-    <p>
-     <label for='name'>Name
-      <span class='required'>&nbsp;*</span>
-     </label>
-     <input id='name' name='name' placeholder='Name' maxlength='50' required><br>
-    </p>
-
-    <p>
-     <label for='email'>Email
-      <span class='required'>&nbsp;*</span>
-     </label>
-     <input type='email' id='email' name='email' placeholder='Email' required><br>
-    </p>
-
-    <p>
-     <label for='subject'>Subject
-      <span>&nbsp;</span>
-     </label>
-     <input id='subject' name='subject' placeholder='Subject' maxlength='50'><br>
-    </p>
-
-    <p>
-     <div class='required'>
-      <label for='message'>Message
-       <span class='required'>&nbsp;*</span>
-      </label><br>
-      <textarea placeholder='Please type your message here.' id='message' name='message'
-       maxlength='1000' rows='5' cols='26' required></textarea><br> 
-     </div>
-    </p>
-
-    <p>
-     <input type='checkbox' id='checkbox' name='checkbox'>&nbsp;Send a copy to myself.
-    </p>
-
-    <button type='submit' onclick='sendContact()'>
-     <strong>Submit</strong>;
-    </button>
-
-   </form>
-
-   <script>
-    var fields = {}
-    
-    document.addEventListener('DOMContentLoaded', function() {
-       fields.name = document.getElementById('name')
-       fields.email = document.getElementById('email')
-       fields.subject = document.getElementById('subject')
-       fields.message = document.getElementById('message')
-       fields.checkbox = document.getElementById('checkbox')
-    })
-    
-    function isNotEmpty(value) {
-       if (value == null || typeof value == 'undefined' ) return false
-       return (value.length > 0)
-    }
-    
-    function isCheckboxChecked() {
-      return field.checkbox.checked
-    }
-    
-    function fieldValidation(field, validationFunction) {
-       if (field == null) return false
-    
-       let isFieldValid = validationFunction(field.value)
-       if (!isFieldValid) {
-          field.className = 'placeholderRed'
-          } else {
-             field.className = ''
-             }
-    
-       return isFieldValid
-    }
-    
-    function isValid() {
-       var valid = true
-       valid &= fieldValidation(fields.name, isNotEmpty)
-       valid &= fieldValidation(fields.email, isNotEmpty)
-       valid &= fieldValidation(fields.message, isNotEmpty)
-       return valid
-    }
-
-    function getData() {
-       let name = fields.name.value
-       let email = fields.email.value
-       let subject = fields.subject.value
-       let message = fields.message.value
-       let checkbox = fields.checkbox.checked
-       let data = [{'name': name,
-                    'email': email,
-                    'subject': subject,
-                    'message': message,
-                    'checkbox': checkbox}]
-       return data
-    }
-    
-    function sendContact() {
-      if (isValid()) {
-      data = getData()
-      alert('Thank you for your message.')
-      } else {
-        alert('Something went wrong with submitting the form.')
-        <!-- Add something here to make sure nothing further happens. -->
-      }
-    }
-
-  </script>
-    
   </body>
+
+</html>
