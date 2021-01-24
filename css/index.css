@@ -1,0 +1,30 @@
+.galleryimage {
+  width: 60em; height: 48em;
+}
+
+.menubutton {
+  background: #00adee; padding: 1em; margin: 1em; border: none;
+}
+
+.question {
+  font-family: Roboto; font-weight: 700; font-size: 1em;
+}
+
+.submitbutton {
+  font-family: Roboto; font-weight: 700; font-size: 1em;
+}
+
+h1 {
+  font-family: Roboto; font-weight: 500;
+}
+
+a {
+  font-family: Roboto; font-weight: 500; font-size: 2em; text-decoration: none;
+}
+
+p {
+  font-family: Roboto; font-weight: 500; font-size: 1em;
+
+img {
+  width: 30em; height: 30em;
+}
